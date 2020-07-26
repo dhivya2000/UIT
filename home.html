@@ -1,180 +1,52 @@
 <html>
-<head><title>Home Page</title></head>
-<style>
- .coupon {
-  border: 5px dotted #bbb;
-  width: 80%;
-  border-radius: 15px;
-  margin: 0 auto;
-  max-width: 300px;
-
+    <head><title>KidzSection</title></head>
+    
+    <style>
+      
+        .column {
+  float: left;
+  width: 19%;
+  padding: 2px;
 }
 
-.container1 {
-  padding: 2px 16px;
-  background-color: #f1f1f1;
-  max-width: 300px;
-  max-height:300px;
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-left: 2px;
+  margin-top: 100px;
 }
 
-.promo {
-  background: #ccc;
-  padding: 3px;
+.price {
+  color: grey;
+  font-size: 10px;
 }
 
-.expire {
-  color: red;
-}
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+.card button {
   border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
   cursor: pointer;
   width: 100%;
+  font-size: 18px;
 }
 
-button:hover {
-  opacity: 0.8;
+.card button:hover {
+  opacity: 0.7;
 }
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 20%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 30px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-  .bg-image {
-  /* The image used */
-  background-image: url("images/pic2.jpg");
-  
-  /* Add the blur effect */
- /* filter: blur(8px);
-  -webkit-filter: blur(8px);*/
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-}
-
- #navbar {
+      #navbar {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 50px 10px;
@@ -229,299 +101,91 @@ span.psw {
     float: none;
   }
 }
-  
-  .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 1px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-.container2 {
-  margin-top: 5%;
-  }
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-  .flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin-left: 20%;
-  margin-top:3%;
-}
-
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:purple;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: yellow;
-    color:black;
-  }
-  
-  </style>
-<body>
-   <div class="bg-image">
-  <div id="navbar">
-    <a href="#default" id="logo">CompanyLogo</a>
-    <div id="navbar-right">
-      <a class="active" href="#home">Home</a>
-      <a href="#login" onclick="document.getElementById('id01').style.display='block'">Login</a>
-      <div id="id01" class="modal">
-  
-        <form class="modal-content animate" action="kidsection.html" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="images/pic7.jpg" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
-           
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-               </div>
-        </form>
-      </div>
-      <a href="#signup" onclick="document.getElementById('id02').style.display='block'">Sign Up</a>
-      <div id="id02" class="modal">
-  
-        <form class="modal-content animate" action="kidsection.html" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="images/pic7.jpg" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <label for="psw"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Signup</button>
-           
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-               </div>
-        </form>
-      </div>
-    </div>
-  </div>
-      <br>
-      <br>
-      <br>
-      <div class="container2">
-      <div class="row"> 
-        <div class="column">
-         
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="images/pic4.jpg" alt="Paris" style="width:300px;height:200px">
-              </div>
-              <div class="flip-box-back">
-                <h2>Paris</h2>
-                <p>What an amazing city</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="images/pic5.jpg" alt="Paris" style="width:300px;height:200px">
-              </div>
-              <div class="flip-box-back">
-                <h2>Paris</h2>
-                <p>What an amazing city</p>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <div class="coupon">
-          <div class="container1">
-        <img src="images/pic4.jpg" alt="Avatar" style="width:100%;">
-          </div>
-          </div>
-       
-        
-      </div>
-          <div class="row">         
-        <div class="column">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="images/pic5.jpeg" alt="Paris" style="width:300px;height:200px">
-              </div>
-              <div class="flip-box-back">
-                <h2>Paris</h2>
-                <p>What an amazing city</p>
-              </div>
-            </div>
-          </div>
-        </div>
-           <div class="column">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
-                  <img src="images/pic6.jpg" alt="Paris" style="width:300px;height:200px">
+    </style>
+        <body>
+            <div id="navbar" >
+                <a href="#default" id="logo">KIDS SECTION</a>
+                <div id="navbar-right">
+                  <a class="active" href="home.html">Home</a>
+                  <a href="#" >Kidz</a>
+                  <a href="#login" >Clothes</a>
+                  <a href="#login" >Electronics</a>
+                  <a href="#login" >Furniture</a>
+                  <a onclick="mycart()" >My Cart</a>    
                 </div>
-                <div class="flip-box-back">
-                  <h2>Paris</h2>
-                  <p>What an amazing city</p>
                 </div>
-              </div>
-            </div>
-           
-             </div>
-             <div class="coupon">
-              <div class="container1">
-              <div  style="background-color:white">
-                <h2><b>20% OFF YOUR PURCHASE</b></h2> 
-               </div>
-             
-                <p>Use Promo Code: <span class="promo">BOH232</span></p>
-                <p class="expire">Expires: Jan 03, 2021</p>
-              </div>
-            </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="column">
+                <div class="card">
+                    <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p class="add" id="1"><button onClick="addcart(1,this)">Add to Cart</button></p>
+                </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
+                        <h1>Tailored Jeans</h1>
+                        <p class="price">$19.99</p>
+                        <p class="add" id="2"><button onClick="addcart(2,this)">Add to Cart</button></p>
+                    </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Tailored Jeans</h1>
+                            <p class="price">$19.99</p>
+                            <p class="add" id="3"><button onClick="addcart(3,this)">Add to Cart</button></p>
+                        </div>
+                          </div>
+                          <div class="column">
+                            <div class="card">
+                                <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
+                                <h1>Tailored Jeans</h1>
+                                <p class="price">$19.99</p>
+                                <p class="add" id="4"><button onClick="addcart(4,this)">Add to Cart</button></p>
+                            </div>
+                              </div>
+                              <div class="column">
+                                <div class="card">
+                                    <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
+                                    <h1>Tailored Jeans</h1>
+                                    <p class="price">$19.99</p>
+                                    <p class="add" id="5"><button onClick="addcart(5,this)">Add to Cart</button></p>
+                                </div>
+                                  </div>
+                </div>
+        </body>
+        <script>
+          var flag=new Array(100);
+            function addcart(id,ob){
+                var x = document.getElementsByClassName("add")[id-1].getAttribute("id");
+                ob.innerHTML="Added";
+                flag[id]=1;
+                alert("added to cart Item  "+x);
+                             
+
+            }
             
-        </div>
-      </div>
-    </div>
-       
-    
-</body>
-<script>
-  window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-}
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-var modal = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-  </script>
-
+            function mycart(){
+              var j=0;
+              for(var i=1;i<=5;i++)
+              {
+                
+                if(flag[i]==1)
+                j=j+1;
+                
+              }
+              alert("Number of items added to cart in Kids Section "+j);
+            }
+            
+            
+        
+        </script>
 </html>
