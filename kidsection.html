@@ -1,6 +1,8 @@
 <html>
     <head><title>KidzSection</title></head>
+    
     <style>
+      
         .column {
   float: left;
   width: 19%;
@@ -102,13 +104,14 @@
     </style>
         <body>
             <div id="navbar" >
-                <a href="#default" id="logo">CompanyLogo</a>
+                <a href="#default" id="logo">KIDS SECTION</a>
                 <div id="navbar-right">
                   <a class="active" href="home.html">Home</a>
                   <a href="#" >Kidz</a>
                   <a href="#login" >Clothes</a>
                   <a href="#login" >Electronics</a>
-                  <a href="#login" >Furniture</a>  
+                  <a href="#login" >Furniture</a>
+                  <a onclick="mycart()" >My Cart</a>    
                 </div>
                 </div>
                 <br>
@@ -118,11 +121,11 @@
                 <br>
                 <div class="row">
                     <div class="column">
-                <div class="card" group="first" id="id01">
+                <div class="card">
                     <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
                     <h1>Tailored Jeans</h1>
                     <p class="price">$19.99</p>
-                    <p><button onClick="addcart()">Add to Cart</button></p>
+                    <p class="add" id="1"><button onClick="addcart(1,this)">Add to Cart</button></p>
                 </div>
                   </div>
                   <div class="column">
@@ -130,7 +133,7 @@
                         <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
                         <h1>Tailored Jeans</h1>
                         <p class="price">$19.99</p>
-                        <p><button>Add to Cart</button></p>
+                        <p class="add" id="2"><button onClick="addcart(2,this)">Add to Cart</button></p>
                     </div>
                       </div>
                       <div class="column">
@@ -138,7 +141,7 @@
                             <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
                             <h1>Tailored Jeans</h1>
                             <p class="price">$19.99</p>
-                            <p><button>Add to Cart</button></p>
+                            <p class="add" id="3"><button onClick="addcart(3,this)">Add to Cart</button></p>
                         </div>
                           </div>
                           <div class="column">
@@ -146,7 +149,7 @@
                                 <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
                                 <h1>Tailored Jeans</h1>
                                 <p class="price">$19.99</p>
-                                <p><button>Add to Cart</button></p>
+                                <p class="add" id="4"><button onClick="addcart(4,this)">Add to Cart</button></p>
                             </div>
                               </div>
                               <div class="column">
@@ -154,18 +157,34 @@
                                     <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
                                     <h1>Tailored Jeans</h1>
                                     <p class="price">$19.99</p>
-                                    <p><button>Add to Cart</button></p>
+                                    <p class="add" id="5"><button onClick="addcart(5,this)">Add to Cart</button></p>
                                 </div>
                                   </div>
                 </div>
         </body>
         <script>
-            function addcart(){
-                var x = document.getElementsByGroupName("first")[0].id;
-                alert("added to cart"+x);
-                
+          var flag=new Array(100);
+            function addcart(id,ob){
+                var x = document.getElementsByClassName("add")[id-1].getAttribute("id");
+                ob.innerHTML="Added";
+                flag[id]=1;
+                alert("added to cart Item  "+x);
+                             
 
             }
+            
+            function mycart(){
+              var j=0;
+              for(var i=1;i<=5;i++)
+              {
+                
+                if(flag[i]==1)
+                j=j+1;
+                
+              }
+              alert("Number of items added to cart in Kids Section "+j);
+            }
+            
             
         
         </script>
