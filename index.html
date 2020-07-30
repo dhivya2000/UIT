@@ -361,7 +361,7 @@ ul {
       <a href="#login" onclick="document.getElementById('id01').style.display='block'">Login</a>
       <div id="id01" class="modal">
   
-        <form class="modal-content animate" action="kidsection.html" method="get">
+        <div class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="images/pic7.jpg" alt="Avatar" class="avatar">
@@ -374,19 +374,19 @@ ul {
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
               
-            <button type="submit">Login</button>
+            <button type="submit" onclick="kidsection.html">Login</button>
            
           </div>
       
           <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                </div>
-        </form>
+        </div>
       </div>
       <a href="#signup" onclick="document.getElementById('id02').style.display='block'">Sign Up</a>
       <div id="id02" class="modal">
   
-        <form class="modal-content animate" action="kidsection.html" method="get">
+        <div class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="images/pic7.jpg" alt="Avatar" class="avatar">
@@ -400,14 +400,14 @@ ul {
             <label for="psw"><b>Confirm Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
               
-            <button type="submit">Signup</button>
+            <button type="submit" onclick="kidsection.html">Signup</button>
            
           </div>
       
           <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
                </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
