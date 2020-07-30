@@ -1,13 +1,41 @@
 <html>
     <head><title>KidzSection</title></head>
-    
+   
     <style>
-      
-        .column {
+#example{
+  border: 3px ;
+  padding: 75px;
+  background-image: url('images/picvv.jpg');
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-clip: border-box;
+  margin-top:80px;
+  height:50%;
+
+}
+.h
+{
+margin-left:550px;
+}
+div.transbox {
+  margin: 30p
+  background-color: #ffffff;
+  border: 7px solid lightblue;
+  opacity: 0.6;
+}
+div.transbox h3 {
+  margin: 5%;
+  font-weight: bold;
+  color: #33FF4B;
+  text-align:center;
+}
+  .column {
   float: left;
   width: 19%;
   padding: 2px;
 }
+
 
 /* Clearfix (clear floats) */
 .row::after {
@@ -25,7 +53,6 @@
   margin-left: 2px;
   margin-top: 100px;
 }
-
 .price {
   color: grey;
   font-size: 10px;
@@ -46,7 +73,7 @@
 .card button:hover {
   opacity: 0.7;
 }
-      #navbar {
+  #navbar {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 50px 10px;
@@ -63,7 +90,7 @@
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 2px;
 }
@@ -100,17 +127,23 @@
   #navbar-right {
     float: none;
   }
-}
+
+
+
     </style>
         <body>
             <div id="navbar" >
+              <img src="images/logo.png"width="80" height="80">
                 <a href="#default" id="logo">KIDS SECTION</a>
                 <div id="navbar-right">
-                  <a class="active" href="home.html">Home</a>
-                  <a href="#" >Kidz</a>
-                  <a href="#login" >Clothes</a>
-                  <a href="#login" >Electronics</a>
-                  <a href="#login" >Furniture</a>
+                 <form style="float:right;display:inline-block;line-height:54px;padding-left:150px;margin-top:16px;">
+                     <input type="text" name="searchbar" placeholder="search" size="50">
+                </form>
+                   <a href="index.html">Home</a>
+                  <a class="active" href="#" >Kidz</a>
+                  <a href="clothes.html" >Clothes</a>
+                  <a href="Electronic.html" >Electronics</a>
+                  <a href="contact.html" >Contact Us</a>
                   <a onclick="mycart()" >My Cart</a>    
                 </div>
                 </div>
@@ -119,48 +152,61 @@
                 <br>
                 <br>
                 <br>
-                <div class="row">
+           <div id=example>
+           <div class="h"><h1 style="color:yellow">FLAT 20% OFF!!  HURRY UP</h1></div>
+           
+  <div class="transbox">
+    <h3 style="color:white" >TRENDING DESIGNER KID'S CLOTHES</h3>
+  <h3 style="color:white">KIDS WORLD FUN</h3>
+ 
+</div>
+</div>
+  </div>
+           
+       
+                 <div class="row">
                     <div class="column">
                 <div class="card">
-                    <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
-                    <h1>Tailored Jeans</h1>
+                    <img src="images/picaa.jpg" alt="Denim Jeans" style="width:230px;height:200px;">
+                    <h1>Frog</h1>
                     <p class="price">$19.99</p>
                     <p class="add" id="1"><button onClick="addcart(1,this)">Add to Cart</button></p>
                 </div>
                   </div>
                   <div class="column">
                     <div class="card">
-                        <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
-                        <h1>Tailored Jeans</h1>
+                        <img src="images/picbb.jpg" alt="Denim Jeans" style="width:230px;height:200px;">
+                        <h1>PrincessDress</h1>
                         <p class="price">$19.99</p>
                         <p class="add" id="2"><button onClick="addcart(2,this)">Add to Cart</button></p>
                     </div>
                       </div>
                       <div class="column">
                         <div class="card">
-                            <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
-                            <h1>Tailored Jeans</h1>
-                            <p class="price">$19.99</p>
+                            <img src="images/piccc.jpg" alt="Denim Jeans" style="width:230px;height:200px;">
+                            <h1>Printed Frog</h1>
+                            <p class="price">$19.00</p>
                             <p class="add" id="3"><button onClick="addcart(3,this)">Add to Cart</button></p>
                         </div>
                           </div>
                           <div class="column">
                             <div class="card">
-                                <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
-                                <h1>Tailored Jeans</h1>
-                                <p class="price">$19.99</p>
+                                <img src="images/picdd.jpg" alt="Denim Jeans" style="width:230px;height:200px;">
+                                <h1>Party Wear</h1>
+                                <p class="price">$21.99</p>
                                 <p class="add" id="4"><button onClick="addcart(4,this)">Add to Cart</button></p>
                             </div>
                               </div>
                               <div class="column">
                                 <div class="card">
-                                    <img src="images/pic4.jpg" alt="Denim Jeans" style="width:100%">
-                                    <h1>Tailored Jeans</h1>
-                                    <p class="price">$19.99</p>
+                                    <img src="images/picee.jpg" alt="Denim Jeans" style="width:230px;height:200px;">
+                                    <h1>Long Sleeve</h1>
+                                    <p class="price">$19.50</p>
                                     <p class="add" id="5"><button onClick="addcart(5,this)">Add to Cart</button></p>
                                 </div>
                                   </div>
                 </div>
+             
         </body>
         <script>
           var flag=new Array(100);
@@ -172,20 +218,24 @@
                              
 
             }
-            
+           
             function mycart(){
               var j=0;
               for(var i=1;i<=5;i++)
               {
-                
+               
                 if(flag[i]==1)
                 j=j+1;
-                
+               
               }
               alert("Number of items added to cart in Kids Section "+j);
             }
-            
-            
-        
+           
+           
+       
         </script>
+
+   
+                                   
+ </body>          
 </html>
