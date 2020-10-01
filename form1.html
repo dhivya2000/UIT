@@ -376,13 +376,14 @@ input[type=submit]:hover {
                       
                       if(0<a&&a<150)
                       {
-                        var mail = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+                        var mail =  /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+
                          if(emailid.match(mail))
                          {
                           var phoneno = /^\d{10}$/;
                           if(num.match(phoneno))
                           {
-		             alert("Form has been submitted successfully");
+		             alert("Hi"+names+"!"+"your has been submitted successfully");
                             return true;
                           }
                           else
