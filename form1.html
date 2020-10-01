@@ -1,0 +1,424 @@
+<html>
+    <head><title>Contest</title>
+  <meta charset="UTF-8">
+<title>Example of Twitter Bootstrap 3 Carousel</title>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js">
+</script>
+ <meta name="Generator" content="EditPlus">  
+          <meta name="Author" content="">  
+          <meta name="Keywords" content="">  
+          <meta name="Description" content="">
+<script language="javascript">
+ function ChangeColor()  
+               {  
+                    document.getElementById('btn1').style.backgroundColor='violet';  
+                      setTimeout("ChangeColor2()",2000); 
+               }  
+               function ChangeColor2()  
+               {  
+                    document.getElementById('btn1').style.backgroundColor='grey';  
+                     setTimeout("ChangeColor3()",2000); 
+               }  
+               function ChangeColor3()  
+               {  
+                    document.getElementById('btn1').style.backgroundColor='white';  
+                    setTimeout("ChangeColor4()",2000);  
+               }  
+               function ChangeColor4()  
+               {  
+                    document.getElementById('btn1').style.backgroundColor='pink';  
+               }  
+        
+</script>
+</head>
+    <style>
+input[type=text],input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid pink;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: yellow;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+.container {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 20px;
+  margin-left:50px;
+  margin-top:210px;
+  width:700px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+   
+}
+
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.f
+{
+  margin-left:1px;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 80px;
+  background-color:none;
+}
+
+.left{
+  left: 0;
+  background-color:#F3EE6B;
+  
+  
+}
+
+.right {
+  right: 0;
+  background-color:#F3EE6B;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+      #navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 50px 20px;
+  transition: 0.4s;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  z-index: 50;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 2px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+  
+
+.item{
+    background: none;    
+    text-align: center;
+    height: 300px !important;
+}
+
+.carousel{
+    margin-top:200px;
+    width:600px;
+    height:100%;
+    background:none;
+}
+
+.bs-example{
+	margin: 20px;
+                 background:none;
+}
+
+.carousel.carousel-fade .item {
+  background:none;
+  opacity:0;
+  filter: alpha(opacity=0); /* ie fix */
+}
+
+.carousel.carousel-fade .active.item {
+   background:none;
+    opacity:1;
+    filter: alpha(opacity=100); /* ie fix */
+}
+
+    </style>
+       
+        <body>
+       
+            <div id="navbar" >
+              <img src="images/logo.png"width="80" height="80">
+                <a href="#default" id="logo">CONTEST</a>
+                 
+                <div id="navbar-right">
+                <form style="float:right;display:inline-block;line-height:30px;padding-left:150px;margin-top:5px;">
+                     <input type="text" name="searchbar" placeholder="search" size="50">
+                </form>  
+                  <a  href="index.html">Home</a>
+                  <a href="kidsection.html" >Kidz</a>
+                  <a href="clothes.html" >Clothes</a>
+                  <a href="Electronic.html" >Electronics</a>
+                  <a href="contact.html" >Contact Us</a>
+                  <a class="active" href="#" >Contest</a>
+                </div>
+              </div>
+                  
+                  <div class="split left">
+                    <div class="centered">
+                    
+                    
+                      <div class="container">
+                         <h1>Enter Your Details to join the Contest</h1>
+                       <form name="myform" method="post" action="#" onsubmit="myFunction()">
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="name1"> Name</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="fname" name="fname" placeholder="Your name.." required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="age1">Age</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="number" id="age" name="age" placeholder="Your age.." required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="emailid1">Email</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="emailid" name="emailid" placeholder="Your mailID.." required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="num1">Number</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="number" id="num" name="num" placeholder="Your Number.." required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="dob">Date of Birth</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="date" id="start" name="trip-start" required>
+                     
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                         <!-- <input type="submit" value="Submit">-->
+                         <button onClick="validateForm()">submit</button>
+                        </div>
+                      </form>
+                    
+                    </div>
+                  </div>
+                </div>
+              
+                  <div class="split right">
+                  
+                    <div class="centered">
+                     
+                    <div class="bs-example">
+                  
+                  <div id="myCarousel" class="carousel slide" data-interval="6500" data-ride="carousel">
+                  
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>   
+           
+       <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item carousel-fade">
+                
+                 <img src="images/pic90.jpg" alt="Los Angeles" style="width:100%; ">
+                 
+            </div>
+            <div class="item carousel-fade">
+             <img src="images/pic56.jpg" alt="Los Angeles" style="width:100%; ">   
+            </div>
+            <div class="item carousel-fade">
+                <img src="images/pic70.jpg" alt="Los Angeles" style="width:100%; ">
+            </div>
+            <div class="item carousel-fade">
+                <img src="images/pic78.jpg" alt="Los Angeles" style="width:100%; ">
+            </div>
+        </div>
+      
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        
+    </div>
+</div>
+               <input type="button" onclick="ChangeColor()" value="click me"</button>
+               <div id="btn1">
+              <h1 style="color:red;">Exiciting Gifts available!</h1> 
+              <marquee style="color:green;">CONTEST ENDS BY OCTOBER 15</marquee>
+              <h3" style:centred">HURRY UP!</h3>
+               </div>
+                  </div>
+                 </div>
+                 
+               </body>
+                <script>
+                    function validateForm()
+                  
+                    {
+                      
+                      var alphaExp = /^[a-zA-Z]+$/;
+                      var names=document.myform.fname.value;
+                      var age=document.myform.age.value;
+                      var emailid=document.myform.emailid.value;
+                      var num=document.myform.num.value;
+
+                     
+                     if(names.match(alphaExp))
+                    {
+                      var a=parseInt(age);
+                      
+                      if(0<a&&a<150)
+                      {
+                        var mail = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+                         if(emailid.match(mail))
+                         {
+                          var phoneno = /^\d{10}$/;
+                          if(num.match(phoneno))
+                          {
+                            return true;
+                          }
+                          else
+                          {
+                          alert("enter valid phone number");
+                          
+                          }
+                         }
+                         else
+                         {
+                           alert("Enter valid email");
+                           
+                         }
+                      }
+                      else
+                      alert("Enter age between 0-150");
+                      
+                    }
+                    else  
+                     {
+                        alert("Please enter only alphabets");
+                        
+                     }
+                     
+                   
+                     
+                    }
+function myFunction() {
+  alert("The form was submitted");
+}
+
+
+         </script>
+         
+
+                
+                </html>
+
+
