@@ -252,7 +252,7 @@ input[type=submit]:hover {
                     
                       <div class="container">
                          <h1>Enter Your Details to join the Contest</h1>
-                       <form name="myform" method="post" action="form1.html" onsubmit="myFunction()">
+                       <form name="myform" action="form1.html">
                         <div class="row">
                           <div class="col-25">
                             <label for="name1"> Name</label>
@@ -383,6 +383,7 @@ input[type=submit]:hover {
                           var phoneno = /^\d{10}$/;
                           if(num.match(phoneno))
                           {
+		             alert("Form has been submitted successfully");
                             return true;
                           }
                           else
@@ -410,9 +411,7 @@ input[type=submit]:hover {
                    
                      
                     }
-function myFunction() {
-  alert("The form was submitted");
-}
+
 
 
          </script>
