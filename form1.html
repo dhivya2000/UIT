@@ -289,7 +289,7 @@ input[type=submit]:hover {
                             <label for="dob">Date of Birth</label>
                           </div>
                           <div class="col-75">
-                            <input type="date" id="start" name="trip-start" required>
+                            <input type="date" id="date" name="date" required>
                      
                           </div>
                         </div>
@@ -368,8 +368,7 @@ input[type=submit]:hover {
                       var age=document.myform.age.value;
                       var emailid=document.myform.emailid.value;
                       var num=document.myform.num.value;
-
-                     
+                      var date=document.myform.date.value;                     
                      if(names.match(alphaExp))
                     {
                       var a=parseInt(age);
@@ -383,8 +382,15 @@ input[type=submit]:hover {
                           var phoneno = /^\d{10}$/;
                           if(num.match(phoneno))
                           {
-		             alert("Hi"+names+"!"+"your form has been submitted successfully");
-                            return true;
+				  if(date==" ")
+				  {
+					  alert("Please specify DOB");
+				  }
+				  else
+				  {
+		                       alert("Hi "+names+"!"+"your form has been submitted successfully");
+                                       return true;
+				  }
                           }
                           else
                           {
